@@ -15,8 +15,8 @@ export default class App extends Component {
         <Navbar />
         <Switch>
           <Route path="/cart" component={Cart} />
-          <Route path="/" exact component={Productlist} />
           <Route path="/details" component={Details} />
+          <Route path="/" component={Productlist} />
           <Route component={Default} />
         </Switch>
         <Modal />

@@ -48,7 +48,7 @@ class ProductProvider extends Component {
     product.total = price;
     this.setState(
       () => {
-        return { products: tempProducts, cart: [...this.state.cart, product] };
+        return { cart: [...this.state.cart, product] };
       },
       () => {
         this.addTotals();
@@ -93,7 +93,6 @@ class ProductProvider extends Component {
     if (product.count === 0) {
       this.removeItem(id);
     } else {
-     
       product.total = product.count * product.price;
       this.setState(
         () => {
@@ -155,6 +154,31 @@ class ProductProvider extends Component {
       };
     });
   };
+  searchProducts = (e) => {
+    let tempProducts = [];
+    storeProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempProducts = [...tempProducts, singleItem];
+    });
+
+    if (e.target.value) {
+      const filteredProducts = tempProducts.filter((items) => {
+        return items.title.toLowerCase().includes(e.target.value.toLowerCase());
+      });
+      this.setState(() => {
+        return {
+          storeProducts: filteredProducts,
+        };
+      });
+    }
+    else {
+      this.setState(() => {
+        return {
+          storeProducts: tempProducts,
+        };
+      });
+    }
+  };
   render() {
     return (
       <ProductContext.Provider
@@ -168,6 +192,7 @@ class ProductProvider extends Component {
           decrement: this.decrement,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
+          searchProducts: this.searchProducts
         }}
       >
         {this.props.children}

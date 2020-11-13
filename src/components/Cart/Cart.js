@@ -15,8 +15,8 @@ export default class Cart extends Component {
               return (
                 <React.Fragment>
                   <CartColumns />
-                  <CartList value={value}/>
-                  <CartTotals value={value}/>
+                  <CartList value={value} />
+                  <CartTotals value={value} />
                 </React.Fragment>
               );
             } else {

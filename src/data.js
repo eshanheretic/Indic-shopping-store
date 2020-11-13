@@ -115,7 +115,7 @@ export const storeProducts = [
     {
       id: 10,
       title: "Samsung Galaxy S20 Plus",
-      img: "img/products-10.png",
+      img: "img/product-10.png",
       price: 80000,
       company: "SAMSUNG",
       info:
@@ -137,22 +137,10 @@ export const storeProducts = [
       total: 0
     },
     {
-      id: 11,
+      id: 12,
       title: "Samsung Galaxy Note 10 Plus",
       img: "img/product-12.png",
       price: 84200,
-      company: "SAMSUNG",
-      info:
-        "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
-      inCart: false,
-      count: 0,
-      total: 0
-    },
-    {
-      id: 11,
-      title: "Samsung Galaxy Note 10",
-      img: "img/product-13.png",
-      price: 50000,
       company: "SAMSUNG",
       info:
         "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
