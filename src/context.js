@@ -140,9 +140,7 @@ class ProductProvider extends Component {
   };
   addTotals = () => {
     let subTotal = 0;
-    this.state.cart.map((item) => {
-      subTotal += item.total;
-    });
+    this.state.cart.map((item) => (subTotal += item.total));
     const tempTax = subTotal * 0.1;
     const tax = parseFloat(tempTax.toFixed(2));
     const total = subTotal + tax;
@@ -170,8 +168,7 @@ class ProductProvider extends Component {
           storeProducts: filteredProducts,
         };
       });
-    }
-    else {
+    } else {
       this.setState(() => {
         return {
           storeProducts: tempProducts,
@@ -192,7 +189,7 @@ class ProductProvider extends Component {
           decrement: this.decrement,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
-          searchProducts: this.searchProducts
+          searchProducts: this.searchProducts,
         }}
       >
         {this.props.children}

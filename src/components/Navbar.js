@@ -5,9 +5,13 @@ export default class Navbar extends Component {
     return (
       <div>
         <nav className="navbar navbar-dark bg-primary navbar-expand-md ">
-          <a href="\" className="navbar-brand">
-            Indic Shopping Store{" "}
-          </a>
+          <Link
+            to="/"
+            className="nav-item nav-link "
+            style={{ color: "white" }}
+          >
+            Indic Shopping Store
+          </Link>
           <button
             type="button"
             className="navbar-toggler"
@@ -19,27 +23,13 @@ export default class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav">
-              <Link to='/'>
-                <a href="/" className="nav-item nav-link active">
-                  Home
-              </a>
-              </Link>
-              <Link to='\about'> <a href="/about" className="nav-item nav-link">
-                About
-              </a></Link>
-
-              <a href="/" className="nav-item nav-link">
-                Products
-              </a>
-              <Link to='/cart'>
-                <a href="/cart" className="nav-item nav-link ">
-                  Cart
-              </a>
+              <Link to="/" className="nav-item nav-link active">
+                Home
               </Link>
 
-              <a href="/signin" className="nav-item nav-link active float-right">
-                Sign In!
-              </a>
+              <Link to="/cart" className="nav-item nav-link ">
+                Cart
+              </Link>
             </div>
           </div>
         </nav>

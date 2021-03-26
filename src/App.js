@@ -14,9 +14,10 @@ export default class App extends Component {
       <React.Fragment>
         <Navbar />
         <Switch>
+          <Route path="/" exact component={Productlist} />
           <Route path="/cart" component={Cart} />
           <Route path="/details" component={Details} />
-          <Route path="/" component={Productlist} />
+
           <Route component={Default} />
         </Switch>
         <Modal />
